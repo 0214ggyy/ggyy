@@ -88,5 +88,13 @@
 	selected(name){
 	  this.active = name;
 	}
+## 富文本编译样式::
+	1.其中img图片需要后台给一个服务器接口,在postman中调用接口,上传图片.获取一个连接,添加到富文本编译中.
+	2.其他标签的样式直接添加
+	3.上传后台数据库
+	4.调用接口获取数据渲染
+	<h5 style="font-size:16px;font-family:PingFang-SC-Bold;font-weight:bold;color:rgba(255,255,255,1);padding-top:10px ;padding-left:17px ;">发布1.01版本</h5><p style="font-size:14px;font-family:PingFang-SC-Medium;font-weight:500;color:rgba(255,255,255,1);padding-top:21px ;padding-left:23px;"> 1.算法设置的疯狂双方开始疯狂沙克首付</p><p><img src="http://umapdev.dfmc.com.cn:8090/smart/BaseAppFile/send/图层 3.png"style="width: 193px;height: 145px;padding-top:13px ;padding-left:23px ;"></p>
+<p style="font-size:14px;font-family:PingFang-SC-Medium;font-weight:500;color:rgba(255,255,255,1);padding-top:21px ;padding-left:23px;"> 2.算法设置的疯狂双方开始疯狂沙克首付</p><p><img src= "http://umapdev.dfmc.com.cn:8090/smart/BaseAppFile/send/图层 3.png" style="width: 193px;height: 145px;padding-top:13px ;padding-left:23px ;"
+><img src="http://umapdev.dfmc.com.cn:8090/smart/BaseAppFile/send/图层 3.png"style="width: 193px;height: 145px;padding-top:13px ;padding-left:23px ;"></p>
 	
 	
