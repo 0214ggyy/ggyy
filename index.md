@@ -46,12 +46,56 @@
 
 ## git 一次输入密码设置
   git config --global credential.helper store
-## vue高亮显示 v-for遍历
+## vue渲染数据.高亮按钮 解决方式
+    在data中定义即将渲染的数据，及active
+
+	data() {
+	  return {
+	   wpList: [
+	    {
+	     name: '食品饮料'
+	    },
+	    {
+	     name: '鲜花'
+	    },
+	    {
+	     name: '蛋糕'
+	    },
+	    {
+	     name: '水果生鲜'
+	    },
+	    {
+	     name: '服装鞋帽'
+	    },
+	    {
+	     name: '其它'
+	    }
+	   ],
+	   active:''
+	  }
+	 }
+	 ...
+
+	•定义高亮的标签类名
+
+	.active {
+	  background: #fd7522;
+	  border: 1px solid #fd7522;
+	  color: #fff;
+	 }
+
+	•动态渲染按钮的数据，并动态的增加active类名（当active为当前name值时添加），添加点击事件（点击时让active=name）
+
+	<el-row class="wp-list">
+	  <el-button v-for="item in wpList" :key="item.name" 
+	  :class="{active : active == item.name}" 
+	  @click="selected(item.name)">{{item.name}}</el-button>
+	</el-row>
+
+	•在methods中定义点击事件函数
+
+	selected(name){
+	  this.active = name;
+	}
 	
-	  <li 
-				v-for="(item,idx) in year" 
-				:key="idx"
-				:class="{active : active == item[idx]}" 
-        @click="sel(item[idx])"
-				>{{item}}</li>
-        >
+	
