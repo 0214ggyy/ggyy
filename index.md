@@ -46,4 +46,11 @@
 
 ## git 一次输入密码设置
   git config --global credential.helper store
-   
+## vue高亮显示 v-for遍历
+ --	<li 
+				v-for="(item,idx) in year" 
+				:key="idx"
+				:class="{active : active == item[idx]}" 
+        @click="sel(item[idx])"
+				>{{item}}</li>
+        >--
